@@ -1,4 +1,5 @@
 ﻿using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 
 namespace FunPost
 {
@@ -6,36 +7,75 @@ namespace FunPost
     {
         public static int NumberOfVars = -1;
         
-        static void Main()//i'm so post post, i'm so meta me~eta~~
+        static void Main() //i'm so post post, i'm so meta me~eta~~
         {
             Greetings();
             
             GetNumberOfVariables();
             
-            ExplainPostClasses(WhatPostClasses(GetEval()));
+            ExplainPostClasses(WhatPostClasses(GetEvalClever()));
         }
 
         public static void Greetings()
         {
             Console.WriteLine($"Hello there! I'm a calculator of a Post-Punk's classes");
+            Console.WriteLine("I receive eval in the follow format: 1 1 1 0 0 1 0 1");
         }
         
         public static void GetNumberOfVariables()
         {
-            Console.WriteLine("Enter number of variables");
             while (NumberOfVars < 0)
             {
                 try
                 {
-                    NumberOfVars = int.Parse(Console.ReadLine());
+                    Console.WriteLine("Enter number of variables");
+                    NumberOfVars = int.Parse(Console.ReadLine() ?? "");
                 }
                 catch (Exception e)
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Incorrect number of variables!");
+                    Console.ResetColor();
                 }
             }
         }
-        public static bool[] GetEval()
+        
+        public static bool[] GetEvalClever()
+        {
+            var res = new bool[2];
+
+            bool incorrect = true;
+            
+            while (incorrect)
+            {
+                try
+                {
+                    incorrect = false;
+                    Console.WriteLine("Enter an eval:");
+                    var input = Console.ReadLine() ?? "";
+
+                    if (!input.All(x => x == '0' || x == '1' || x == ' '))
+                        throw new ArgumentException("forbidden symbol detected error");
+                    
+                    res = Regex.Split(input, @"\s+").Select(x => int.Parse(x) == 1).ToArray();
+                    
+                    if (res.Length != (int)Math.Pow(2, NumberOfVars))
+                        throw new ArgumentException($"incorrect eval length detected error: " +
+                                                    $"was {res.Length}. correct is {(int)Math.Pow(2,NumberOfVars)}");
+                }
+                catch (Exception e)
+                {
+                    incorrect = true;
+                    Console.ForegroundColor = ConsoleColor.Yellow;
+                    Console.WriteLine($"{e.Message}");
+                    Console.ResetColor();
+                }
+            }
+            
+            return res;
+        }
+        
+        public static bool[] GetEvalStupidly()
         {
             var res = new bool[(int)Math.Pow(2,NumberOfVars)];
             Console.WriteLine("Enter an eval:");

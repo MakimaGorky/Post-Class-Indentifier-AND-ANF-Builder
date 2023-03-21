@@ -38,7 +38,9 @@ namespace ANFbuilder
                 }
                 catch (Exception e)
                 {
+                    Console.ForegroundColor = ConsoleColor.Yellow;
                     Console.WriteLine("Incorrect number of variables!");
+                    Console.ResetColor();
                 }
             }
 
@@ -132,30 +134,19 @@ namespace ANFbuilder
             var anf = new StringBuilder();
             var binaryEthalon = coefs.Length / 2;
 
-            //Console.WriteLine(coefs.Length);
-            
             for (int i = coefs.Length - 1; i >= 0; i--)
                 if (coefs[i])
                 {
                     var bintemp = binaryEthalon;
                     var addedSth = false;
                     
-                    //Console.WriteLine($"coef: {i}, bineth: {binaryEthalon},bin: {bintemp}");
-                    
                     for (int j = 1; j <= numOfVars; j++)
                     {
-                        //Console.Write($"{i}, {bintemp}");
-                        
                         if ((i & bintemp) == bintemp)
                         {
-                            //Console.Write($" {j} lol");
-                            
                             addedSth = true;
                             anf.Append($"x_{j}");
                         }
-
-                        //Console.WriteLine();
-                        
                         bintemp >>= 1;
                     }
 
