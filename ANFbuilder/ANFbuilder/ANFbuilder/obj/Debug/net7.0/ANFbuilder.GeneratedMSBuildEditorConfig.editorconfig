@@ -7,5 +7,5 @@ build_property.InvariantGlobalization =
 build_property.PlatformNeutralAssembly = 
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
-build_property.RootNamespace = FunPostList
-build_property.ProjectDir = C:\MYO PR\C-Shark~~~~\fun\discrete 2 sem\Post-Class-Indentifier-AND-ANF-Builder\FunPostList\FunPostList\
+build_property.RootNamespace = ANFbuilder
+build_property.ProjectDir = C:\MYO PR\C-Shark~~~~\fun\discrete 2 sem\Post-Class-Indentifier-AND-ANF-Builder\ANFbuilder\ANFbuilder\ANFbuilder\

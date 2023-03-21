@@ -6,7 +6,7 @@ namespace FunPost
     {
         public static int NumberOfVars = -1;
         
-        static void Main()
+        static void Main()//i'm so post post, i'm so meta me~eta~~
         {
             Greetings();
             
@@ -125,11 +125,9 @@ namespace FunPost
             
             //TODO aggregate pls (like a senior)
             
-            for (int i = 0; i < eval.Length; i++) 
-            {
+            for (int i = 0; i < eval.Length; i++)
                 equals_questionmark = equals_questionmark && (antiantieval[i] == eval[i]);
-            }
-            
+
             return equals_questionmark;
         }
         
@@ -143,7 +141,7 @@ namespace FunPost
                     var binpower = 1;
                     while (icopy > 0)
                     {
-                        if (icopy % 2 == 0 && (eval[i] ? 1 : 0) > (eval[i + binpower] ? 1 : 0))
+                        if (icopy % 2 == 0 && (eval[i] ? 1 : 0) > (eval[i + binpower] ? 1 : 0)) // can be simplified lol.
                             return false;
                         icopy /= 2;
                         binpower *= 2;

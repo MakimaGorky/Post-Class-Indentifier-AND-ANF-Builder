@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\FunPostList\\FunPostList\\FunPostList.csproj",
-      "projectName": "FunPostList",
-      "projectPath": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\FunPostList\\FunPostList\\FunPostList.csproj",
+      "projectUniqueName": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\ANFbuilder\\ANFbuilder\\ANFbuilder\\ANFbuilder.csproj",
+      "projectName": "ANFbuilder",
+      "projectPath": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\ANFbuilder\\ANFbuilder\\ANFbuilder\\ANFbuilder.csproj",
       "packagesPath": "C:\\Users\\maidv\\.nuget\\packages\\",
-      "outputPath": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\FunPostList\\FunPostList\\obj\\",
+      "outputPath": "C:\\MYO PR\\C-Shark~~~~\\fun\\discrete 2 sem\\Post-Class-Indentifier-AND-ANF-Builder\\ANFbuilder\\ANFbuilder\\ANFbuilder\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\maidv\\AppData\\Roaming\\NuGet\\NuGet.Config"
